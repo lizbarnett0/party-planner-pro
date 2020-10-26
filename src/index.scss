@@ -1,0 +1,29 @@
+$theme-colors: (
+	'primary': tomato,
+	'danger': teal,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+/* Make the root element at least as big as the page. */
+html,
+body,
+#root {
+	height: 100%;
+}
+/* 
+Give some padding to the header, main and footer elements
+if they are direct children of the #root element.
+*/
+#root > header,
+#root > main,
+#root > footer {
+	padding: 1rem;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-auto-rows: minmax(250px, auto);
+	gap: 1rem;
+}
