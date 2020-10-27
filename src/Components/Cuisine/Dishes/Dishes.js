@@ -12,7 +12,6 @@ const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
 			.then((res) => {
 				let newCuisineCategories = res.meals;
                 setCuisineCategories(newCuisineCategories);
-                console.log(res.meals)
 			})
 			.catch((err) => {
 				console.error(err);

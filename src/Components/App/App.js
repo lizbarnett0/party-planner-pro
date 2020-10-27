@@ -42,6 +42,7 @@ function App() {
 					render={() => <Cuisine cuisineCategories={cuisineCategories} />}
 				/>
 				<Route
+					exact
 					path='/cuisine/:category'
 					render={(routerProps) => {
 						return (
@@ -62,8 +63,8 @@ function App() {
 				/>
 
 				<Route path='/cocktails' render={() => <Cocktails />} />
+				<Route path='/conversations' render={() => <Conversations />} />
 			</main>
-			<Route path='/conversations' render={() => <Conversations />} />
 			<footer>
 				<p>&copy;2020 LCR Labs</p>
 			</footer>
