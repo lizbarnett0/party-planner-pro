@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
+const Dishes = ({ match, dishCategories, setDishCategories }) => {
 	
 	useEffect(() => {
 		const category = match.params.category;
@@ -10,8 +10,7 @@ const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
 		fetch(dishUrl)
 			.then((res) => res.json())
 			.then((res) => {
-				let newCuisineCategories = res.meals;
-                setCuisineCategories(newCuisineCategories);
+                setDishCategories(res.meals);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -21,12 +20,12 @@ const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
 	return (
 		<div>
 			<h1>{match.params.category} Dishes</h1>
-				{cuisineCategories.map((dish) => {
+				{dishCategories.map((dish) => {
 					return (
 						<div key={dish.idMeal}>
 							<img src={dish.strMealThumb}></img>
 							<h1>
-								<Link to={`/cuisine/${match.params.category}/${dish.idMeal}`}>
+								<Link to={`/dishes/${match.params.category}/${dish.idMeal}`}>
 								{dish.strMeal}
 								</Link>
 							</h1>
