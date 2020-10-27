@@ -1,5 +1,5 @@
 $theme-colors: (
-	'primary': tomato,
+  'primary': #B2C2C4,
 	'danger': teal,
 );
 
@@ -79,4 +79,11 @@ button {
 .card-title {
 	font-family: 'Sacramento', cursive;
 	font-size: 30px;
+}
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
