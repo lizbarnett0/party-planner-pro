@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
+	
 	useEffect(() => {
 		const category = match.params.category;
 		const dishUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
@@ -9,10 +10,9 @@ const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
 		fetch(dishUrl)
 			.then((res) => res.json())
 			.then((res) => {
-				console.log(res.meals);
 				let newCuisineCategories = res.meals;
-				setCuisineCategories(newCuisineCategories);
-				console.log(cuisineCategories);
+                setCuisineCategories(newCuisineCategories);
+                console.log(res.meals)
 			})
 			.catch((err) => {
 				console.error(err);
@@ -22,23 +22,19 @@ const Dishes = ({ match, cuisineCategories, setCuisineCategories }) => {
 	return (
 		<div>
 			<h1>{match.params.category} Dishes</h1>
-			<div className='category-list'>
 				{cuisineCategories.map((dish) => {
 					return (
-						<div key={dish.strMeal}>
+						<div key={dish.idMeal}>
 							<img src={dish.strMealThumb}></img>
 							<h1>
-								<Link
-									to={`cuisine/${match.params.category}/dish.strMealThumb}`}>
-									{dish.strMeal}
+								<Link to={`/cuisine/${match.params.category}/${dish.idMeal}`}>
+								{dish.strMeal}
 								</Link>
 							</h1>
 						</div>
 					);
 				})}
 			</div>
-			;
-		</div>
 	);
 };
 

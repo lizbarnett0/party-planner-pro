@@ -6,6 +6,7 @@ import Home from '../Home/Home';
 
 import Cuisine from '../Cuisine/Cuisine';
 import Dishes from '../Cuisine/Dishes/Dishes';
+import Recipe from '../Cuisine/Dishes/Recipe/Recipe';
 
 import Cocktails from '../Cocktails/Cocktails';
 import Conversations from '../Conversations/Conversations';
@@ -36,6 +37,7 @@ function App() {
 			<Route exact path='/' render={() => <Home />} />
 			<main>
 				<Route
+					exact
 					path='/cuisine'
 					render={() => <Cuisine cuisineCategories={cuisineCategories} />}
 				/>
@@ -49,6 +51,13 @@ function App() {
 								match={routerProps.match}
 							/>
 						);
+					}}
+				/>
+				<Route
+					exact
+					path='/cuisine/:category/:id'
+					render={(routerProps) => {
+						return <Recipe match={routerProps.match} />;
 					}}
 				/>
 

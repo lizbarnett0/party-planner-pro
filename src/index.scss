@@ -21,6 +21,15 @@ if they are direct children of the #root element.
 	padding: 1rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+
 .home {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -91,6 +100,40 @@ header a:hover {
 	color: #222;
 }
 
+//Styling for the Category Pages
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.card-category {
+  border: 1px solid lightgray;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.card-image-category {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  object-fit: shrink;
+}
+
+.card-title-category {
+	font-family: 'Sacramento', cursive;
+	font-size: 30px;
+	color: black;
+}
+
+
+
+
 .card-img-top {
 	width: 200px;
 	height: 200px;
@@ -104,11 +147,4 @@ button {
 .card-title {
 	font-family: 'Sacramento', cursive;
 	font-size: 30px;
-}
-.category-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
 }
