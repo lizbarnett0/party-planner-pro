@@ -3,15 +3,17 @@ import { Route } from 'react-router-dom';
 
 import Header from '../Home/Header/Header';
 import Home from '../Home/Home';
+import About from '../About/About';
+import Testimonials from '../Testimonials/Testimonials';
 
-import DishCategories from '../Dishes/DishCategories'
-import Dishes from '../Dishes/Dishes/Dishes'
-import Recipe from '../Dishes/Dishes/Recipe/Recipe'
+import DishCategories from '../Dishes/DishCategories';
+import Dishes from '../Dishes/Dishes/Dishes';
+import Recipe from '../Dishes/Dishes/Recipe/Recipe';
 
-import DrinkCategories from '../Drinks/DrinkCategories'
-import AlcoholicDrinks from '../Drinks/Drinks/AlcoholicDrinks'
-import NonAlcoholicDrinks from '../Drinks/Drinks/NonAlcoholicDrinks'
-import DrinkRecipe from '../Drinks/DrinkRecipe/DrinkRecipe'
+import DrinkCategories from '../Drinks/DrinkCategories';
+import AlcoholicDrinks from '../Drinks/Drinks/AlcoholicDrinks';
+import NonAlcoholicDrinks from '../Drinks/Drinks/NonAlcoholicDrinks';
+import DrinkRecipe from '../Drinks/DrinkRecipe/DrinkRecipe';
 
 import Dialogue from '../Dialogue/Dialogue';
 
@@ -31,23 +33,15 @@ function App() {
 			});
 	};
 
-	// const getDrinkCategories = () => {
-	// 	fetch(drinkCategoriesUrl)
-	// 		.then((res) => res.json())
-	// 		.then((res) => {
-	// 			setDrinkCategories(res.drinks);
-	// 		});
-	// };
-
-
 	useEffect(() => {
 		getDishCategories();
-		// getDrinkCategories();
 	}, []);
 
 	return (
 		<div className='App'>
 			<Header />
+			<Route exact path='/About' render={() => <About />} />
+			<Route exact path='/Testimonials' render={() => <Testimonials />} />
 			<Route exact path='/' render={() => <Home />} />
 			<main>
 				<Route
