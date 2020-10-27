@@ -2,49 +2,50 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
+import MealLogo from '../../imgs/meal.png'
+import CocktailLogo from '../../imgs/cocktail.png';
+import ConversationLogo from '../../imgs/conversation.png'
+
 const Home = () => {
 	return (
-		<>
+		<div className="home">
 			<div>
-				<Card style={{ width: '18rem' }}>
-					<Card.Img variant='top' src='holder.js/100px180' />
+				<Card>
+					<Card.Img variant='top' src={MealLogo} />
 					<Card.Body>
-						<Card.Title>Meals</Card.Title>
+						<Card.Title>Comestibles</Card.Title>
 						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
+							Dazzle the tastebuds of your guests.
 						</Card.Text>
-						<Button variant='primary'>Go to Meals</Button>
+						<Button variant='primary'>Comestibles</Button>
 					</Card.Body>
 				</Card>
 			</div>
 			<div>
-				<Card style={{ width: '18rem' }}>
-					<Card.Img variant='top' src='holder.js/100px180' />
+				<Card>
+					<Card.Img variant='top' src={CocktailLogo} />
 					<Card.Body>
 						<Card.Title>Cocktails</Card.Title>
 						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
+							Craft the cocktail of your dreams.
 						</Card.Text>
-						<Button variant='primary'>Go to Meals</Button>
+						<Button variant='primary'>Cocktails</Button>
 					</Card.Body>
 				</Card>
 			</div>
 			<div>
-				<Card style={{ width: '18rem' }}>
-					<Card.Img variant='top' src='holder.js/100px180' />
+				<Card>
+					<Card.Img variant='top' src={ConversationLogo} />
 					<Card.Body>
-						<Card.Title>Conversation Starters</Card.Title>
+						<Card.Title>Conversations</Card.Title>
 						<Card.Text>
-							Some quick example text to build on the card title and make up the
-							bulk of the card's content.
+							Keep the conversations flowing.
 						</Card.Text>
-						<Button variant='primary'>Go to Meals</Button>
+						<Button variant='primary'>Conversations</Button>
 					</Card.Body>
 				</Card>
 			</div>
-		</>
+		</div>
 	);
 };
 

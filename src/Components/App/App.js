@@ -1,20 +1,26 @@
-import React from 'react';
-import Home from '../Home/Home'
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
 
-// import Button from 'react-bootstrap/button';
-// import Modal from 'react-bootstrap/modal';
+import Header from '../Header/Header';
+import Home from '../Home/Home';
+import Meals from '../Meals/Meals'
+import Cocktails from '../Cocktails/Cocktails'
+import Conversations from '../Conversations/Conversations';
+
+
 
 function App() {
 	return (
-		<>
-			<header></header>
-
-			<main>
-				<Home />
-			</main>
-
-			<footer></footer>
-		</>
+		<div className='App'>
+			<Header />
+			<Route exact path='/' render={() => <Home />} />
+			<Route path='/meals' render={() => <Meals />} />
+			<Route path='/cocktails' render={() => <Cocktails />} />
+			<Route path='/conversations' render={() => <Conversations />} />
+			<footer>
+				<p>&copy;2020 LCR Labs</p>
+			</footer>
+		</div>
 	);
 }
 
