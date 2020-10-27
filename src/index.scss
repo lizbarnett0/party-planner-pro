@@ -1,5 +1,5 @@
 $theme-colors: (
-  'primary': #B2C2C4,
+	'primary': #b2c2c4,
 	'danger': teal,
 );
 
@@ -29,47 +29,72 @@ if they are direct children of the #root element.
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .App {
-  max-width: 900px;
-  margin: 0 auto;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Sacramento', cursive;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: black;
+}
 
+header h1{
+font-family: 'Sacramento', cursive;
+text-decoration: none;
+}
+
+header h1 a:hover {
+	background-color: #ddd;
+	color: #222;
+	text-decoration: none;
+}
+
+header a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0.5rem 1rem;
+	transition: all 300ms ease;
 }
 
 header nav a {
-  display: inline-block;
-  text-decoration: none;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0.5rem 1rem;
-  transition: all 300ms ease;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0.5rem 1rem;
+	transition: all 300ms ease;
 }
 
 header nav a:hover {
-  background-color: #ddd;
-  color: #222;
+	background-color: #ddd;
+	color: #222;
 }
 
 header nav a:last-of-type {
-  margin-right: -0.5rem;
+	margin-right: -0.5rem;
+}
+
+
+header a:hover {
+	background-color: #ddd;
+	color: #222;
 }
 
 .card-img-top {
-	min-width: 250px;
-    max-height: 250px;
-    object-fit: shrink;
+	width: 200px;
+	height: 200px;
+	object-fit: shrink;
 }
 
 button {
@@ -81,9 +106,9 @@ button {
 	font-size: 30px;
 }
 .category-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 }

@@ -1,14 +1,18 @@
 import React from 'react';
-import FoodCategory from '../FoodCategory/FoodCategory';
+import { Link } from 'react-router-dom';
 
-const Comestibles = ({ foodCategories }) => {
+const Cuisine = ({ cuisineCategories }) => {
 	return ( 
 		<div className='category-list'>
-			{foodCategories.map((category) => {
+			{cuisineCategories.map((category) => {
 				return (
 					<div key={category.idCategory}>
-						<h1>{category.strCategory}</h1>
 						<img src={category.strCategoryThumb}></img>
+						<h1>
+							<Link to={`cuisine/${category.strCategory}`}>
+								{category.strCategory}
+							</Link>
+						</h1>
 					</div>
 				);
 			})}
@@ -16,4 +20,4 @@ const Comestibles = ({ foodCategories }) => {
 	);
 };
 
-export default Comestibles;
+export default Cuisine;
