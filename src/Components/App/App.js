@@ -15,15 +15,13 @@ import AlcoholicDrinks from '../Drinks/Drinks/AlcoholicDrinks';
 import NonAlcoholicDrinks from '../Drinks/Drinks/NonAlcoholicDrinks';
 import DrinkRecipe from '../Drinks/DrinkRecipe/DrinkRecipe';
 
-import Dialogue from '../Dialogue/Dialogue';
+import DialogueCategories from '../Dialogue/DialogueCategories';
 
 function App() {
 	const [dishCategories, setDishCategories] = useState([]);
-	const [drinkCategories, setDrinkCategories] = useState([]);
 	//const [convoCategories, setConvocategories] = useState([]);
 
 	const dishCategoriesUrl = `https://www.themealdb.com/api/json/v1/1/categories.php`;
-	const drinkCategoriesUrl = `https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list`;
 
 	const getDishCategories = () => {
 		fetch(dishCategoriesUrl)
@@ -87,10 +85,10 @@ function App() {
 					exact
 					path='/drinks/:category/:id'
 					render={(routerProps) => {
-						return <DrinkRecipe match={routerProps.match} />;
+						return <DrinkRecipe match={routerProps.match} />
 					}}
 				/>
-				<Route path='/dialogue' render={() => <Dialogue />} />
+				<Route path='/dialogue' render={() => <DialogueCategories />} />
 			</main>
 			<footer>
 				<p>&copy;2020 LCR Labs</p>
