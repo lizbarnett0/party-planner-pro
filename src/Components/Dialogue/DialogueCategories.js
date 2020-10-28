@@ -59,7 +59,7 @@ const DialogueCategories = () => {
 				<Card>
 					<Card.Img variant='top' />
 					<Card.Body>
-						<Card.Title>Family</Card.Title>
+						<Card.Title>With Family</Card.Title>
 						<Card.Text>BLAH BLAH.</Card.Text>
 						<Link to='/dialogue/family'>
 							<Button variant='primary'>Family</Button>
@@ -83,10 +83,10 @@ const DialogueCategories = () => {
 				<Card>
 					<Card.Img variant='top' />
 					<Card.Body>
-						<Card.Title>Casual / With Friends</Card.Title>
+						<Card.Title>With Friends</Card.Title>
 						<Card.Text>BLAH BLAH.</Card.Text>
-						<Link to='/dialogue/casualwithfriends'>
-							<Button variant='primary'>Casual / With Friends</Button>
+						<Link to='/dialogue/friends'>
+							<Button variant='primary'>With Friends</Button>
 						</Link>
 					</Card.Body>
 				</Card>

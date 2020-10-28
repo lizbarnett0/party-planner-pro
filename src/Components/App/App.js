@@ -16,10 +16,10 @@ import NonAlcoholicDrinks from '../Drinks/Drinks/NonAlcoholicDrinks';
 import DrinkRecipe from '../Drinks/DrinkRecipe/DrinkRecipe';
 
 import DialogueCategories from '../Dialogue/DialogueCategories';
+import Dialogue from '../Dialogue/Dialogue';
 
 function App() {
 	const [dishCategories, setDishCategories] = useState([]);
-	//const [convoCategories, setConvocategories] = useState([]);
 
 	const dishCategoriesUrl = `https://www.themealdb.com/api/json/v1/1/categories.php`;
 
@@ -85,13 +85,21 @@ function App() {
 					exact
 					path='/drinks/:category/:id'
 					render={(routerProps) => {
-						return <DrinkRecipe match={routerProps.match} />
+						return <DrinkRecipe match={routerProps.match} />;
 					}}
 				/>
-				<Route path='/dialogue' render={() => <DialogueCategories />} />
+				<Route exact path='/dialogue' render={() => <DialogueCategories />} />
+
+				<Route
+					exact
+					path='/dialogue/:category'
+					render={(routerProps) => {
+						return <Dialogue match={routerProps.match} />;
+					}}
+				/>
 			</main>
 			<footer>
-				<p>&copy;2020 LCR Labs</p>
+				<p>&copy;2020 Lucky Lizard Productions</p>
 			</footer>
 		</div>
 	);
