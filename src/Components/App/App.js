@@ -99,7 +99,7 @@ function App() {
 				/>
 			</main>
 			<footer>
-				<p>&copy; 2020 Lucky Lizard</p>
+				<p>&copy; 2020 Lucky Lizard Technologies</p>
 			</footer>
 		</div>
 	);

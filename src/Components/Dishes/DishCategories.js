@@ -5,10 +5,10 @@ const DishCategories = ({ dishCategories }) => {
 	let dishList = dishCategories.map((category) => {
 		return (
 			<div className='card-category' key={category.idCategory}>
-				<div><img src={category.strCategoryThumb} /></div>
-				
+				<img src={category.strCategoryThumb} />
+
 				<Link to={`/dishes/${category.strCategory}`}>
-					<div className="card-title">{category.strCategory}</div>
+					<div className='card-title'>{category.strCategory}</div>
 				</Link>
 			</div>
 		);

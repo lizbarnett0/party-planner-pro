@@ -84,6 +84,7 @@ footer {
 	justify-items: center;
 }
 
+
 .home-card-title {
 	font-family: 'Sacramento', cursive;
 	font-size: 30px;
@@ -137,38 +138,37 @@ footer {
 	width: 50vw;
 }
 
-// .container-home {
-// 	display: grid;
-// 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-// 	grid-auto-rows: minmax(250px, auto);
-// 	grid-gap: 1rem;
-// 	margin: 0 auto;
-// 	max-width: 1200px;
-// 	padding: 1rem;
-// }
+.container{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-auto-rows: minmax(200px, auto);
+	grid-gap: 1rem;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 1rem;
+	color: black;
+}
 
-// .card-category {
-// 	display: grid;
-// 	border: 1px solid lightgray;
-// 	border-radius: 1rem;
-// }
 
-// .card-image {
-// 	align-items: center;
-// 	display: flex;
-// 	justify-content: center;
-// }
-// .card-title {
-// 	font-family: 'Sacramento', cursive;
-// 	font-size: 30px;
-// 	color: black;
-// 	//background-color: #276074;
-// 	margin: 0;
-// 	padding: 1rem;
-// 	text-align: center;
-// }
+.card-category h3 {
+	color: black;
+	font-size: 30px;
+}
 
-// .card-text {
-// 	font-family: 'Montserrat', sans-serif;
-// 	text-align: center;
-// }
+.card-image {
+	height: auto;
+	width: auto;
+}
+.card-title {
+	font-size: 30px;
+	color: black;
+	//background-color: #276074;
+	margin: 0;
+	padding: 1rem;
+	text-align: center;
+}
+
+.card-text {
+	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+}

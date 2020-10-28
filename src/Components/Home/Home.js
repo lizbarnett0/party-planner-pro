@@ -13,7 +13,7 @@ const Home = () => {
 				<Link to='/dishes'>
 					<img className='home-card-img-dish' src={DishLogo} />
 					<p className='home-card-title'>Dishes</p>
-					<p className='home-card-text'>Dazzle your guests tastebuds.</p>
+					<p className='home-card-text'>Dazzle your guests' tastebuds.</p>
 				</Link>
 			</div>
 			<div className='drink-card'>
