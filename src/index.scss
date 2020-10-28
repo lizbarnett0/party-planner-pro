@@ -15,26 +15,11 @@ body,
 Give some padding to the header, main and footer elements
 if they are direct children of the #root element.
 */
+
 #root > header,
 #root > main,
 #root > footer {
 	padding: 1rem;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-
-.home {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto;
-	gap: 1rem;
 }
 
 body {
@@ -43,37 +28,21 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.App {
-	max-width: 900px;
-	margin: 0 auto;
-}
+//Styling for the header
 
 header {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
+	flex-direction: row; // items go left to right
+	justify-content: space-between; //items are evenly distributed in the line; first item is on the start line, last item on the end line
+	align-items: center; //this is aligning them in the vertical center
 	color: black;
 }
 
-header h1{
-font-family: 'Sacramento', cursive;
-text-decoration: none;
-}
-
-header h1 a:hover {
-	background-color: #ddd;
-	color: #222;
-	text-decoration: none;
-}
-
-header a {
-	display: inline-block;
-	text-decoration: none;
+header h1 {
+	font-family: 'Sacramento', cursive;
+	margin: 0;
+	padding: 0.5rem;
 	color: black;
-	font-family: 'Montserrat', sans-serif;
-	padding: 0.5rem 1rem;
-	transition: all 300ms ease;
 }
 
 header nav a {
@@ -88,64 +57,118 @@ header nav a {
 header nav a:hover {
 	background-color: #ddd;
 	color: #222;
+	text-decoration: underline;
 }
-
-header nav a:last-of-type {
-	margin-right: -0.5rem;
-}
-
 
 header a:hover {
-	background-color: #ddd;
-	color: #222;
+	text-decoration: none;
 }
 
-//Styling for the Category Pages
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 1rem;
+//Styling for the Footer
+footer {
+	color: gray;
+	font-size: 12px;
 }
 
-.card-category {
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
+//Stying for the Home Page
+
+.home {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1rem;
+	margin: auto;
+	max-width: 1200px;
+	padding: 1rem;
+	align-content: center;
+	justify-items: center;
 }
 
-.card-image-category {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  object-fit: shrink;
-}
-
-.card-title-category {
+.home-card-title {
 	font-family: 'Sacramento', cursive;
 	font-size: 30px;
+	text-align: center;
+	padding: 0 37px 0 0;
 	color: black;
 }
 
-
-
-
-.card-img-top {
-	width: 200px;
-	height: 200px;
-	object-fit: shrink;
-}
-
-button {
-	width: 200px;
-}
-
-.card-title {
+.home-card-title-drink {
 	font-family: 'Sacramento', cursive;
 	font-size: 30px;
+	text-align: center;
+	color: black;
+	
+}
+.home-card-text {
+	text-align: center;
+	color: black;
 }
 
+.home-card-img {
+	max-width: 200px;
+	max-height: 200px;
+	margin: auto;
+}
+
+.home-card-img-dish {
+	max-width: 200px;
+	max-height: 200px;
+	margin: 0;
+	
+}
+.dish-card {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.drink-card {
+	grid-row: 1;
+	grid-column: 2;
+}
+
+.dialogue-card {
+	grid-row: 1;
+	grid-column: 3;
+}
+
+.home-image {
+	grid-row: 2;
+	grid-column: 1 / span 3;
+	width: 50vw;
+}
+
+// .container-home {
+// 	display: grid;
+// 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+// 	grid-auto-rows: minmax(250px, auto);
+// 	grid-gap: 1rem;
+// 	margin: 0 auto;
+// 	max-width: 1200px;
+// 	padding: 1rem;
+// }
+
+// .card-category {
+// 	display: grid;
+// 	border: 1px solid lightgray;
+// 	border-radius: 1rem;
+// }
+
+// .card-image {
+// 	align-items: center;
+// 	display: flex;
+// 	justify-content: center;
+// }
+// .card-title {
+// 	font-family: 'Sacramento', cursive;
+// 	font-size: 30px;
+// 	color: black;
+// 	//background-color: #276074;
+// 	margin: 0;
+// 	padding: 1rem;
+// 	text-align: center;
+// }
+
+// .card-text {
+// 	font-family: 'Montserrat', sans-serif;
+// 	text-align: center;
+// }

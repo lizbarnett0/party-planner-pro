@@ -1,52 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 
 import DishLogo from '../../imgs/dish.png';
 import DrinkLogo from '../../imgs/drink.png';
 import DialogueLogo from '../../imgs/dialogue.png';
+import DinnerPartyPic from '../../imgs/dinnerparty.jpg';
 
 const Home = () => {
 	return (
-		<div className='home'>
-			<div>
-				<Card>
-					<Card.Img variant='top' src={DishLogo} />
-					<Card.Body>
-						<Card.Title>Dishes</Card.Title>
-						<Card.Text>Dazzle the tastebuds of your guests.</Card.Text>
-						<Link to='/dishes'>
-							<Button variant='primary'>Dishes</Button>
-						</Link>
-					</Card.Body>
-				</Card>
+		<section className='home'>
+			<div className='dish-card'>
+				<Link to='/dishes'>
+					<img className='home-card-img-dish' src={DishLogo} />
+					<p className='home-card-title'>Dishes</p>
+					<p className='home-card-text'>Dazzle your guests tastebuds.</p>
+				</Link>
 			</div>
-			<div>
-				<Card>
-					<Card.Img variant='top' src={DrinkLogo} />
-					<Card.Body>
-						<Card.Title>Drinks</Card.Title>
-						<Card.Text>Craft a delicious cocktail or non-alcoholic drink.</Card.Text>
-						<Link to='/drinks'>
-							<Button variant='primary'>Drinks</Button>
-						</Link>
-					</Card.Body>
-				</Card>
+			<div className='drink-card'>
+				<Link to='/drinks'>
+					<img className='home-card-img' src={DrinkLogo} />
+					<p className='home-card-title-drink'>Drinks</p>
+					<p className='home-card-text'>Craft a delicious beverage.</p>
+				</Link>
 			</div>
-			<div>
-				<Card>
-					<Card.Img variant='top' src={DialogueLogo} />
-					<Card.Body>
-						<Card.Title>Dialogue</Card.Title>
-						<Card.Text>Keep the conversations flowing.</Card.Text>
-						<Link to='/dialogue'>
-							<Button variant='primary'>Dialogue</Button>
-						</Link>
-					</Card.Body>
-				</Card>
+			<div className='dialogue-card'>
+				<Link to='/dialogue'>
+					<img className='home-card-img' src={DialogueLogo} />
+					<p className='home-card-title'>Dialogue</p>
+					<p className='home-card-text'>Keep the conversations flowing.</p>
+				</Link>
 			</div>
-		</div>
+			<img className='home-image' src={DinnerPartyPic} />
+		</section>
 	);
 };
 

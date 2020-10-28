@@ -20,19 +20,20 @@ const Dishes = ({ match, dishCategories, setDishCategories }) => {
 	return (
 		<div>
 			<h1>{match.params.category} Dishes</h1>
+			<div className='container'>
 				{dishCategories.map((dish) => {
 					return (
-						<div key={dish.idMeal}>
-							<img src={dish.strMealThumb}></img>
-							<h1>
+						<div className='card-category' key={dish.idMeal}>
+							<h3>
 								<Link to={`/dishes/${match.params.category}/${dish.idMeal}`}>
-								{dish.strMeal}
+									<div>{dish.strMeal}</div>
 								</Link>
-							</h1>
+							</h3>
 						</div>
 					);
 				})}
 			</div>
+		</div>
 	);
 };
 

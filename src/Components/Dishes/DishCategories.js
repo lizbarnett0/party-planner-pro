@@ -4,16 +4,11 @@ import { Link } from 'react-router-dom';
 const DishCategories = ({ dishCategories }) => {
 	let dishList = dishCategories.map((category) => {
 		return (
-			<div key={category.idCategory}>
+			<div className='card-category' key={category.idCategory}>
+				<div><img src={category.strCategoryThumb} /></div>
+				
 				<Link to={`/dishes/${category.strCategory}`}>
-					<div className='card-category'>
-						<div className='card-image-category'>
-							<img src={category.strCategoryThumb}></img>
-						</div>
-						<div className='card-title-category'>
-							<h1>{category.strCategory}</h1>
-						</div>
-					</div>
+					<div className="card-title">{category.strCategory}</div>
 				</Link>
 			</div>
 		);
