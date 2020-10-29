@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../Dialogue/dialogue.scss'
 
 const Dialogue = ({ match }) => {
 	const [dialogue, setDialogue] = useState();

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './dishes.scss';
 
 const Recipe = ({ match }) => {
 	const [recipe, setRecipe] = useState();

@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import AlcoholPic from '../../imgs/alcoholic.jpeg'
+import NonAlcoholPic from '../../imgs/nonalcoholic.jpg';
 
 const DrinkCategories = () => {
 	return (
-		<div className='drink-categories'>
-			<div className="alc">
+		<div className='drink-category-container'>
+			<div className='alc'>
 				<Link to='/drinks/alcoholic'>
-					<h1>Alcoholic Drinks</h1>
+					<h1>Alcoholic</h1>
+					<img src={AlcoholPic} />
 				</Link>
 			</div>
-			<div className="nonalc">
+			<div className='nonalc'>
 				<Link to='/drinks/nonalcoholic'>
-					<h1>Non-Alcoholic Drinks</h1>
+						<h1>Non-Alcoholic</h1>
+						<img src={NonAlcoholPic} />
 				</Link>
 			</div>
-			
+
 		</div>
 	);
 };
