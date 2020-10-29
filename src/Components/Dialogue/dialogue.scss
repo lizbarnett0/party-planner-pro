@@ -5,7 +5,7 @@
 	grid-gap: 1rem;
 	margin: 0 auto;
 	max-width: 1200px;
-	padding: 1rem;
+	padding: 1rem 1rem 4rem 1rem;
 	color: black;
 }
 
@@ -15,14 +15,15 @@
 .dialogue-container h3 {
 	text-align: center;
 	color: black;
+	
+	
 }
-.dialogue-container h3 a:hover{
-	text-decoration: none;
 
-}
 
 .dialogue-container img {
 	width: 300px;
 	height: 150px;
+	margin-left: 55px;
+
     
 }
