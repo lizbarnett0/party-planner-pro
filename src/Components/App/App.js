@@ -11,9 +11,9 @@ import Dishes from '../Dishes/Dishes'
 import Recipe from '../Dishes/Recipe'
 
 import DrinkCategories from '../Drinks/DrinkCategories';
-import AlcoholicDrinks from '../Drinks/Drinks/AlcoholicDrinks';
-import NonAlcoholicDrinks from '../Drinks/Drinks/NonAlcoholicDrinks';
-import DrinkRecipe from '../Drinks/DrinkRecipe/DrinkRecipe';
+import AlcoholicDrinks from '../Drinks/AlcoholicDrinks';
+import NonAlcoholicDrinks from '../Drinks/NonAlcoholicDrinks';
+import DrinkRecipe from '../Drinks/DrinkRecipe';
 
 import DialogueCategories from '../Dialogue/DialogueCategories';
 import Dialogue from '../Dialogue/Dialogue';

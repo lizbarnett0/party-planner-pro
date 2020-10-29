@@ -9,8 +9,7 @@ const Dialogue = ({ match }) => {
 			.then((res) => res.json())
 			.then((res) => {
 				setDialogue(res);
-				console.log(res);
-				console.log(match.params.category);
+				
 			})
 			.catch((err) => {
 				console.error(err);
@@ -21,21 +20,18 @@ const Dialogue = ({ match }) => {
 		return null;
 	}
 	return (
-		<div className="topics">
-			<h3>
+		<div className='topics'>
+			<h2>
 				{match.params.category.charAt(0).toUpperCase() +
-					match.params.category.slice(1)} Conversation Topics
-			</h3>
-			{dialogue.map((topic) => {
-				if (topic.category === match.params.category)
-					return (
-						<div>
-							<ul>
-								<li>{topic.question}</li>
-							</ul>
-						</div>
-					);
-			})}
+					match.params.category.slice(1)}{' '}
+				Conversation Topics
+			</h2>
+			<div className='question'>
+				{dialogue.map((topic) => {
+					if (topic.category === match.params.category)
+						return <p>{topic.question}</p>;
+				})}
+			</div>
 		</div>
 	);
 };

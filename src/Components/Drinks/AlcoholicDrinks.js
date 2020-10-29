@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import '../drinks.scss'
+import './drinks.scss'
 
 const AlcoholicDrinks = () => {
 	const [alcoholicDrinks, setAlcoholicDrinks] = useState();
@@ -28,7 +28,10 @@ const AlcoholicDrinks = () => {
 				{alcoholicDrinks.map((drink) => {
 					return (
 						<div key={drink.idDrink}>
-							<img className="drink-img"src={drink.strDrinkThumb}></img>
+							<img
+								className='drink-img'
+								src={drink.strDrinkThumb}
+								alt={drink.idDrink}></img>
 							<h1>
 								<Link to={`/drinks/alcoholic/${drink.idDrink}`}>
 									{drink.strDrink}

@@ -25,10 +25,9 @@ const Dishes = ({ match, dishCategories, setDishCategories }) => {
 				{dishCategories.map((dish) => {
 					return (
 						<div key={dish.idMeal}>
-						
 							<div>
 								<Link to={`/dishes/${match.params.category}/${dish.idMeal}`}>
-									<img src={dish.strMealThumb} />
+									<img src={dish.strMealThumb} alt={dish.idMeal} />
 									<h3>{dish.strMeal}</h3>
 								</Link>
 							</div>

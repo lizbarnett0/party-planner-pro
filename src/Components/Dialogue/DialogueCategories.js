@@ -16,37 +16,37 @@ const DialogueCategories = () => {
 				<div className='dialogue'>
 					<Link to='/dialogue/funny'>
 						<h3>Funny</h3>
-						<img src={Funny} />
+						<img src={Funny} alt='funny' />
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/deep'>
 						<h3>Deep</h3>
-						<img src={Deep} />
+						<img src={Deep} alt='deep' />
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/date'>
 						<h3>Date</h3>
-						<img src={Date} />
+						<img src={Date} alt='date' />
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/family'>
 						<h3>Family</h3>
-						<img src={Family} />
+						<img src={Family} alt='family' />
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/networking'>
 						<h3>Networking</h3>
-						<img src={Networking} />
+						<img src={Networking} alt='networking' />
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/friends'>
 						<h3>Friends</h3>
-						<img src={Friends} />
+						<img src={Friends} alt='friends' />
 					</Link>
 				</div>
 			</div>

@@ -37,7 +37,9 @@ const Testimonials = () => {
 					height='270'
 					frameBorder='0'
 					class='giphy-embed'
+					tite='krisjennergif'
 					allowFullScreen></iframe>
+
 
 				<h5>-Mom</h5>
 			</div>

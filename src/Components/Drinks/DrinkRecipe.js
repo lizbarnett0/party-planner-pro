@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../drinks.scss'
+import './drinks.scss';
 
 const DrinkRecipe = ({ match }) => {
 	const [drinkRecipe, setDrinkRecipe] = useState();
@@ -23,7 +23,10 @@ const DrinkRecipe = ({ match }) => {
 	return (
 		<div className='recipe-container'>
 			<h1>{drinkRecipe.strDrink}</h1>
-			<img className="drink-img-recipe" src={drinkRecipe.strDrinkThumb}></img>
+			<img
+				className='drink-img-recipe'
+				src={drinkRecipe.strDrinkThumb}
+				alt={drinkRecipe.strDrink}></img>
 			<h3>Ingredients</h3>
 			<ul>
 				{drinkRecipe.strIngredient1 && (

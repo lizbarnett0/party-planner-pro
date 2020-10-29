@@ -24,7 +24,7 @@ const Recipe = ({ match }) => {
 		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
 			<div className='recipe-img'>
-				<img  src={recipe.strMealThumb}></img>
+				<img src={recipe.strMealThumb} alt={recipe.strMeal} />
 			</div>
 			<h3>Ingredients</h3>
 			<ul>

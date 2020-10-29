@@ -12,26 +12,26 @@ const Home = () => {
 		<section className='home'>
 			<div className='dish-card'>
 				<Link to='/dishes'>
-					<img className='home-card-img-dish' src={DishLogo} />
+					<img className='home-card-img-dish' src={DishLogo} alt='dish logo' />
 					<p className='home-card-title'>Dishes</p>
 					<p className='home-card-text'>Dazzle your guests' tastebuds.</p>
 				</Link>
 			</div>
 			<div className='drink-card'>
 				<Link to='/drinks'>
-					<img className='home-card-img' src={DrinkLogo} />
+					<img className='home-card-img' src={DrinkLogo} alt='drink logo' />
 					<p className='home-card-title-drink'>Drinks</p>
 					<p className='home-card-text'>Craft a delicious beverage.</p>
 				</Link>
 			</div>
 			<div className='dialogue-card'>
 				<Link to='/dialogue'>
-					<img className='home-card-img' src={DialogueLogo} />
+					<img className='home-card-img' src={DialogueLogo} alt='dialogue logo' />
 					<p className='home-card-title'>Dialogue</p>
 					<p className='home-card-text'>Keep the conversation flowing.</p>
 				</Link>
 			</div>
-			<img className='home-image' src={DinnerPartyPic} />
+			<img className='home-image' src={DinnerPartyPic} alt="" />
 		</section>
 	);
 };
