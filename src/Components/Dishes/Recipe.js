@@ -3,8 +3,6 @@ import React, { useState, useEffect } from 'react';
 const Recipe = ({ match }) => {
 	const [recipe, setRecipe] = useState();
 
-	
-
     useEffect(() => {
         const recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`;
     
@@ -24,10 +22,10 @@ const Recipe = ({ match }) => {
 	return (
 		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
-			<img className='dish-img' src={recipe.strMealThumb}></img>
-			<h3>
-				<strong>Ingredients</strong>
-			</h3>
+			<div className='recipe-img'>
+				<img  src={recipe.strMealThumb}></img>
+			</div>
+			<h3>Ingredients</h3>
 			<ul>
 				{recipe.strIngredient1 && (
 					<li>

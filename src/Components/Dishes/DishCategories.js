@@ -7,15 +7,20 @@ const DishCategories = ({ dishCategories }) => {
 	let dishList = dishCategories.map((category) => {
 		return (
 			<div key={category.idCategory}>
-				<img src={category.strCategoryThumb} />
 
 				<Link to={`/dishes/${category.strCategory}`}>
-					<div className='card-title'>{category.strCategory}</div>
+				<img src={category.strCategoryThumb} />
+					<p className='dish-card-title'>{category.strCategory}</p>
 				</Link>
 			</div>
 		);
 	});
-	return <div className='container'>{dishList}</div>;
+	return (
+		<div>
+		<h1>Dish Categories</h1>
+	<div className='dish-container'>{dishList}</div>
+	</div>
+	);
 };
 
 export default DishCategories;
