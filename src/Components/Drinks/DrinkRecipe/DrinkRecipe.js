@@ -20,7 +20,7 @@ const DrinkRecipe = ({ match }) => {
 		return null;
 	}
 	return (
-		<div>
+		<div className="container">
 			<h1>{drinkRecipe.strDrink}</h1>
 			<img src={drinkRecipe.strDrinkThumb}></img>
 			<h3>Ingredients</h3>

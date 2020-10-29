@@ -20,11 +20,11 @@ const Dialogue = ({ match }) => {
 		return null;
 	}
 	return (
-		<div>
-			<h1>
+		<div className="topics">
+			<h3>
 				{match.params.category.charAt(0).toUpperCase() +
-					match.params.category.slice(1)}
-			</h1>
+					match.params.category.slice(1)} Conversation Topics
+			</h3>
 			{dialogue.map((topic) => {
 				if (topic.category === match.params.category)
 					return (

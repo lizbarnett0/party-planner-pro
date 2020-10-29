@@ -5,31 +5,18 @@ import Button from 'react-bootstrap/Button';
 
 const DrinkCategories = () => {
 	return (
-		<div className='home'>
-			<div>
-				<Card>
-					<Card.Img variant='top' />
-					<Card.Body>
-						<Card.Title>Alcoholic Drinks</Card.Title>
-						<Card.Text>BLAH BLAH.</Card.Text>
-						<Link to='/drinks/alcoholic'>
-							<Button variant='primary'>Alcoholic Drinks</Button>
-						</Link>
-					</Card.Body>
-				</Card>
+		<div className='drink-categories'>
+			<div className="alc">
+				<Link to='/drinks/alcoholic'>
+					<h1>Alcoholic Drinks</h1>
+				</Link>
 			</div>
-			<div>
-				<Card>
-					<Card.Img variant='top' />
-					<Card.Body>
-						<Card.Title>Non-Alcoholic Drinks</Card.Title>
-						<Card.Text>BLAH BLAH.</Card.Text>
-						<Link to='/drinks/nonalcoholic'>
-							<Button variant='primary'>Non-Alcoholic Drinks</Button>
-						</Link>
-					</Card.Body>
-				</Card>
+			<div className="nonalc">
+				<Link to='/drinks/nonalcoholic'>
+					<h1>Non-Alcoholic Drinks</h1>
+				</Link>
 			</div>
+			
 		</div>
 	);
 };

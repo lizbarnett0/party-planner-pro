@@ -27,7 +27,7 @@ const Home = () => {
 				<Link to='/dialogue'>
 					<img className='home-card-img' src={DialogueLogo} />
 					<p className='home-card-title'>Dialogue</p>
-					<p className='home-card-text'>Keep the conversations flowing.</p>
+					<p className='home-card-text'>Keep the conversation flowing.</p>
 				</Link>
 			</div>
 			<img className='home-image' src={DinnerPartyPic} />
