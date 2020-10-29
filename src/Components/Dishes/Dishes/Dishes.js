@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../dishes.scss';
 
 const Dishes = ({ match, dishCategories, setDishCategories }) => {
 	

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import '../drinks.scss'
 
 const AlcoholicDrinks = () => {
 	const [alcoholicDrinks, setAlcoholicDrinks] = useState();
@@ -23,18 +24,20 @@ const AlcoholicDrinks = () => {
 	return (
 		<div>
 			<h1>Alcoholic Drinks</h1>
-			{alcoholicDrinks.map((drink) => {
-				return (
-					<div key={drink.idDrink}>
-						<img src={drink.strDrinkThumb}></img>
-						<h1>
-							<Link to={`/drinks/alcoholic/${drink.idDrink}`}>
-								{drink.strDrink}
-							</Link>
-						</h1>
-					</div>
-				);
-			})}
+			<div className='container'>
+				{alcoholicDrinks.map((drink) => {
+					return (
+						<div key={drink.idDrink}>
+							<img className="drink-img"src={drink.strDrinkThumb}></img>
+							<h1>
+								<Link to={`/drinks/alcoholic/${drink.idDrink}`}>
+									{drink.strDrink}
+								</Link>
+							</h1>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 };

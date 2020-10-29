@@ -22,10 +22,12 @@ const Recipe = ({ match }) => {
 		return null;
     }
 	return (
-		<div>
+		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
-			<img src={recipe.strMealThumb}></img>
-			<h3>Ingredients</h3>
+			<img className='dish-img' src={recipe.strMealThumb}></img>
+			<h3>
+				<strong>Ingredients</strong>
+			</h3>
 			<ul>
 				{recipe.strIngredient1 && (
 					<li>

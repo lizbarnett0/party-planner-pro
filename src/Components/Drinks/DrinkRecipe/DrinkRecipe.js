@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import '../drinks.scss'
 
 const DrinkRecipe = ({ match }) => {
 	const [drinkRecipe, setDrinkRecipe] = useState();
@@ -20,9 +21,9 @@ const DrinkRecipe = ({ match }) => {
 		return null;
 	}
 	return (
-		<div className="container">
+		<div className='recipe-container'>
 			<h1>{drinkRecipe.strDrink}</h1>
-			<img src={drinkRecipe.strDrinkThumb}></img>
+			<img className="drink-img-recipe" src={drinkRecipe.strDrinkThumb}></img>
 			<h3>Ingredients</h3>
 			<ul>
 				{drinkRecipe.strIngredient1 && (

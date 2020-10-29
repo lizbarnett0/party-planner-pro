@@ -1,0 +1,67 @@
+//Stying for the Home Page
+
+.home {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 1rem;
+	margin: auto;
+	max-width: 1200px;
+	padding: 1rem;
+	align-content: center;
+	justify-items: center;
+}
+
+
+.home-card-title {
+	font-family: 'Sacramento', cursive;
+	font-size: 30px;
+	text-align: center;
+	padding: 0 37px 0 0;
+	color: black;
+}
+
+.home-card-title-drink {
+	font-family: 'Sacramento', cursive;
+	font-size: 30px;
+	text-align: center;
+	color: black;
+	
+}
+.home-card-text {
+	text-align: center;
+	color: black;
+}
+
+.home-card-img {
+	max-width: 200px;
+	max-height: 200px;
+	margin: auto;
+}
+
+.home-card-img-dish {
+	max-width: 200px;
+	max-height: 200px;
+	margin: 0;
+	
+}
+.dish-card {
+	grid-row: 1;
+	grid-column: 1;
+}
+
+.drink-card {
+	grid-row: 1;
+	grid-column: 2;
+}
+
+.dialogue-card {
+	grid-row: 1;
+	grid-column: 3;
+}
+
+.home-image {
+	grid-row: 2;
+	grid-column: 1 / span 3;
+	width: 50vw;
+}

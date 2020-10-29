@@ -1,0 +1,34 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	grid-auto-rows: minmax(200px, auto);
+	grid-gap: 2rem;
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 1rem;
+	color: black;
+}
+
+
+.drink-img {
+    display: block;
+	height: 100px;
+    width: 100px;
+    margin: auto;
+
+}
+
+.drink-img-recipe {
+    display: block;
+	height: 400px;
+    width: 400px;
+    margin: auto;
+
+}
+
+.recipe-container {
+    margin: 0 auto;
+	max-width: 1200px;
+	padding: 1rem;
+
+}
