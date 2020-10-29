@@ -34,23 +34,22 @@
 
 }
 .alc img {
-	width:200px;
-	height: 200px
+	width: 100%;
 
 }
 
 .nonalc img {
-	width:200px;
+	width: 100%;
 
 }
 
-.alc  {
-	margin: 115px 150px;
-}
+// .alc  {
+// 	margin: 115px 150px;
+// }
 
-.nonalc  {
-	margin: 115px 100px;
-}
+// .nonalc  {
+// 	margin: 115px 100px;
+// }
 .drink-category-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;

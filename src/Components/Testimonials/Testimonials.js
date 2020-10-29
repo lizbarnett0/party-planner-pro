@@ -10,8 +10,8 @@ const Testimonials = () => {
 					<h3>THE MOST AMAZING APP EVER!</h3>
 					<p>
 						That is saying a lot considering I created Facebook. I love this
-						app, it lets me pretty much outsource the heavy lifting for all the
-						dinner parties I am having. If only this app could tell me how to
+						app, it lets me outsource the heavy lifting for all the
+						dinner parties I'm having. If only this app could tell me how to
 						dress for a dinner party since all I own are hoodies...
 					</p>
 					<h4>-Mark Z.</h4>
@@ -35,8 +35,8 @@ const Testimonials = () => {
 					</p>
 					<iframe
 						src='https://giphy.com/embed/8OGSUyxhyBzvwozf3l'
-						width='480'
-						height='270'
+						width='240'
+						height='135'
 						frameBorder='0'
 						class='giphy-embed'
 						tite='krisjennergif'

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AlcoholPic from '../../imgs/alcoholic.jpeg'
+import AlcoholPic from '../../imgs/alcoholic.jpg'
 import NonAlcoholPic from '../../imgs/nonalcoholic.jpg';
 import './drinks.scss';
 

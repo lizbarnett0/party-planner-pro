@@ -12,6 +12,7 @@ const AlcoholicDrinks = () => {
 			.then((res) => res.json())
 			.then((res) => {
 				setAlcoholicDrinks(res.drinks);
+				console.log(res.drinks)
 			})
 			.catch((err) => {
 				console.error(err);

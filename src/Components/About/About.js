@@ -12,8 +12,7 @@ const About = () => {
 					</h3>
 					<h3>
 						Need help finding recipes and and cocktails that all your guests
-						will enjoy? No matter their dietary restrictions or drinking
-						preferences.
+						will enjoy? 
 					</h3>
 					<h3>
 						Worried that the dinner conversation will take a turn towards taboo
@@ -24,7 +23,7 @@ const About = () => {
 					<h3>
 						Party Planner pro is an easy to navigate web application that will
 						provide you with a cocktail recipe, a dinner recipe, and a list of
-						conversation topics to make sure your party is anight to remember!
+						conversation topics to make sure your party is a night to remember!
 					</h3>
 				</div>
 			</div>
