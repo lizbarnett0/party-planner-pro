@@ -3,30 +3,31 @@
 .home {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
+	grid-template-rows: .75fr 1fr;
 	grid-gap: 1rem;
 	margin: auto;
 	max-width: 1200px;
 	padding: 1rem;
 	align-content: center;
 	justify-items: center;
+	padding-bottom: 5rem;
 }
-
 
 .home-card-title {
 	font-family: 'Sacramento', cursive;
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	padding: 0 37px 0 0;
 	color: black;
+	margin: auto;
 }
 
 .home-card-title-drink {
 	font-family: 'Sacramento', cursive;
-	font-size: 30px;
+	font-size: 40px;
 	text-align: center;
 	color: black;
-	
+	margin: auto;
 }
 .home-card-text {
 	text-align: center;
@@ -43,7 +44,6 @@
 	max-width: 200px;
 	max-height: 200px;
 	margin: 0;
-	
 }
 .dish-card {
 	grid-row: 1;

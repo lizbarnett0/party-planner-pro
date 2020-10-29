@@ -1,10 +1,3 @@
-// $theme-colors: (
-// 	'primary': #b2c2c4,
-// 	'danger': teal,
-// );
-
-// @import '~bootstrap/scss/bootstrap.scss';
-
 /* Make the root element at least as big as the page. */
 html,
 body,
@@ -26,24 +19,23 @@ body {
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
-
-
 }
-
 
 
 //Styling for the Footer
 footer {
 	color: gray;
 	font-size: 12px;
+	position: fixed;
+	bottom: 0;
 }
 
 
 
-.card-category h3 {
-	color: black;
-	font-size: 30px;
-}
+// .card-category h3 {
+// 	color: black;
+// 	font-size: 30px;
+// }
 
 // .card-image {
 // 	height: auto;

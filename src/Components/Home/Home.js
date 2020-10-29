@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './home.scss'
 
-
 import DishLogo from '../../imgs/dish.png';
 import DrinkLogo from '../../imgs/drink.png';
 import DialogueLogo from '../../imgs/dialogue.png';

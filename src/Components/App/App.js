@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 
-import Header from '../Home/Header/Header';
+import Header from '../Header/Header';
 import Home from '../Home/Home';
 import About from '../About/About';
 import Testimonials from '../Testimonials/Testimonials';
 
 import DishCategories from '../Dishes/DishCategories';
-import Dishes from '../Dishes/Dishes/Dishes';
-import Recipe from '../Dishes/Dishes/Recipe/Recipe';
+import Dishes from '../Dishes/Dishes'
+import Recipe from '../Dishes/Recipe'
 
 import DrinkCategories from '../Drinks/DrinkCategories';
 import AlcoholicDrinks from '../Drinks/Drinks/AlcoholicDrinks';
