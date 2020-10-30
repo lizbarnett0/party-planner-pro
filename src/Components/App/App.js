@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
@@ -24,20 +24,6 @@ function App() {
 	const [dishCategories, setDishCategories] = useState([]);
 	const [favorites, setFavorites] = useState([]);
 	const [dishes, setDishes] = useState([])
-
-	const dishCategoriesUrl = `https://www.themealdb.com/api/json/v1/1/categories.php`;
-
-	const getDishCategories = () => {
-		fetch(dishCategoriesUrl)
-			.then((res) => res.json())
-			.then((res) => {
-				setDishCategories(res.categories);
-			});
-	};
-
-	useEffect(() => {
-		getDishCategories();
-	}, []);
 
 	return (
 		<div className='App'>

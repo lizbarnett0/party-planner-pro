@@ -11,7 +11,7 @@ const Dishes = ({ match, dishes, setDishes }) => {
 		fetch(dishUrl)
 			.then((res) => res.json())
 			.then((res) => {
-                setDishes(res.meals);
+				setDishes(res.meals);
 			})
 			.catch((err) => {
 				console.error(err);

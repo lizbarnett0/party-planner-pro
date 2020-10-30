@@ -12,7 +12,6 @@ const AlcoholTypes = ({ match }) => {
 			.then((res) => res.json())
 			.then((res) => {
 				setAlcoholTypes(res.drinks);
-				console.log(res.drinks);
 			})
 			.catch((err) => {
 				console.error(err);
