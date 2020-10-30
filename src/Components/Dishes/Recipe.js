@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import './dishes.scss';
 
-const Recipe = ({ match }) => {
+
+const Recipe = ({ match, favorites, setFavorites }) => {
 	const [recipe, setRecipe] = useState();
+	const [redirect, setRedirect] = useState();
 
 	useEffect(() => {
 		const recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`;
@@ -14,11 +17,31 @@ const Recipe = ({ match }) => {
 			})
 
 			.catch(console.error);
-	}, [match.params.id]);
+	}, []);
 
 	if (!recipe) {
 		return null;
 	}
+
+	const handleClick = (event) => {
+		event.preventDefault();
+		console.log(favorites)
+		setFavorites([
+			// ...favorites,
+			{
+				title: recipe.strMeal,
+				image: recipe.strMealThumb,
+				id: recipe.idMeal,
+				category:recipe.strCategory
+			},
+		]);
+		setRedirect(true);
+	};
+
+	if (redirect) {
+		return <Redirect to='/Favorites' />;
+	}
+
 	return (
 		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
@@ -136,8 +159,8 @@ const Recipe = ({ match }) => {
 					<a href={recipe.strSource}>Link to Original Recipe</a>
 				)}
 			</div>
-			<div className="button-div">
-				<button>Add to Favorites</button>
+			<div className='button-div'>
+				<button onClick={handleClick}>Add to Favorites</button>
 			</div>
 		</div>
 	);

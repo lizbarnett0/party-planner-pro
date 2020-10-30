@@ -28,7 +28,7 @@ const Testimonials = () => {
 					<h4>-Barack O.</h4>
 				</div>
 				<div>
-					<h3>Maybe I'm Biased, but ...</h3>
+					<h3>Maybe I'm biased, but ...</h3>
 					<p>
 						My daughter is amazing and so is her app. I don't know what more I
 						need to say.

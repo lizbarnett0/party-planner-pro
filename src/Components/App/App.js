@@ -3,26 +3,26 @@ import { Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Home from '../Home/Home';
-import Favorites from '../Favorites/Favorites'
+import Favorites from '../Favorites/Favorites';
 import About from '../About/About';
 import Testimonials from '../Testimonials/Testimonials';
 
 import DishCategories from '../Dishes/DishCategories';
-import Dishes from '../Dishes/Dishes'
-import Recipe from '../Dishes/Recipe'
+import Dishes from '../Dishes/Dishes';
+import Recipe from '../Dishes/Recipe';
 
 import DrinkCategories from '../Drinks/DrinkCategories';
 import AlcoholicDrinkCategories from '../Drinks/AlcoholicDrinkCategories';
-import AlcoholTypes from '../Drinks/AlcoholTypes'
+import AlcoholTypes from '../Drinks/AlcoholTypes';
 import NonAlcoholicDrinks from '../Drinks/NonAlcoholicDrinks';
 import DrinkRecipe from '../Drinks/DrinkRecipe';
 
 import DialogueCategories from '../Dialogue/DialogueCategories';
 import Dialogue from '../Dialogue/Dialogue';
 
-
 function App() {
 	const [dishCategories, setDishCategories] = useState([]);
+	const [favorites, setFavorites] = useState([]);
 
 	const dishCategoriesUrl = `https://www.themealdb.com/api/json/v1/1/categories.php`;
 
@@ -41,7 +41,11 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
-			<Route exact path='/Favorites' render={() => <Favorites />} />
+			<Route
+				exact
+				path='/Favorites'
+				render={() => <Favorites favorites={favorites} />}
+			/>
 			<Route exact path='/About' render={() => <About />} />
 			<Route exact path='/Testimonials' render={() => <Testimonials />} />
 			<Route exact path='/' render={() => <Home />} />
@@ -68,7 +72,9 @@ function App() {
 					exact
 					path='/dishes/:category/:id'
 					render={(routerProps) => {
-						return <Recipe match={routerProps.match} />;
+						return (
+							<Recipe match={routerProps.match} favorites={favorites} setFavorites={setFavorites} />
+						);
 					}}
 				/>
 
