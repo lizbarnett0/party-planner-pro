@@ -6,18 +6,21 @@ import './drinks.scss';
 
 const DrinkCategories = () => {
 	return (
-		<div className='drink-category-container'>
-			<div className='alc'>
-				<Link to='/drinks/alcoholic'>
-					<h1>Alcoholic</h1>
-					<img src={AlcoholPic} alt='alcohol' />
-				</Link>
-			</div>
-			<div className='nonalc'>
-				<Link to='/drinks/nonalcoholic'>
-					<h1>Non-Alcoholic</h1>
-					<img src={NonAlcoholPic} alt='nonalcohol' />
-				</Link>
+		<div>
+			<h1>Drink Categories</h1>
+			<div className='drink-category-container'>
+				<div className='alc'>
+					<Link to='/drinks/alcoholic'>
+						<img src={AlcoholPic} alt='alcohol' />
+						<h3>Alcoholic</h3>
+					</Link>
+				</div>
+				<div className='nonalc'>
+					<Link to='/drinks/nonalcoholic'>
+						<img src={NonAlcoholPic} alt='nonalcohol' />
+						<h3>Non-Alcoholic</h3>
+					</Link>
+				</div>
 			</div>
 		</div>
 	);

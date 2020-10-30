@@ -38,11 +38,11 @@ const AlcoholTypes = ({ match }) => {
 								className='drink-img'
 								src={type.strDrinkThumb}
 								alt={type.strDrink}></img>
-							<h1>
+							<h3>
 								<Link to={`/drinks/alcoholic/${match.params.alcohol}/${type.idDrink}`}>
 									{type.strDrink}
 								</Link>
-							</h1>
+							</h3>
 						</div>
 					);
 				})}

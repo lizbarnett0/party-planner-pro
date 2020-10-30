@@ -15,38 +15,38 @@ const DialogueCategories = () => {
 			<div className='dialogue-container'>
 				<div className='dialogue'>
 					<Link to='/dialogue/funny'>
-						<h3>Funny</h3>
 						<img src={Funny} alt='funny' />
+						<h3>Funny</h3>
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/deep'>
-						<h3>Deep</h3>
 						<img src={Deep} alt='deep' />
+						<h3>Deep</h3>
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/date'>
-						<h3>Date</h3>
 						<img src={Date} alt='date' />
+						<h3>Date</h3>
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/family'>
-						<h3>Family</h3>
 						<img src={Family} alt='family' />
+						<h3>Family</h3>
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/networking'>
-						<h3>Networking</h3>
 						<img src={Networking} alt='networking' />
+						<h3>Networking</h3>
 					</Link>
 				</div>
 				<div>
 					<Link to='/dialogue/friends'>
-						<h3>Friends</h3>
 						<img src={Friends} alt='friends' />
+						<h3>Friends</h3>
 					</Link>
 				</div>
 			</div>

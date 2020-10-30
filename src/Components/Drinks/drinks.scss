@@ -43,16 +43,10 @@
 
 }
 
-// .alc  {
-// 	margin: 115px 150px;
-// }
-
-// .nonalc  {
-// 	margin: 115px 100px;
-// }
 .drink-category-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 3fr 1fr;
 	grid-gap: 2rem;
 	margin: 0 auto;
 	max-width: 1000px;
