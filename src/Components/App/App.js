@@ -23,6 +23,7 @@ import Dialogue from '../Dialogue/Dialogue';
 function App() {
 	const [dishCategories, setDishCategories] = useState([]);
 	const [favorites, setFavorites] = useState([]);
+	const [dishes, setDishes] = useState([])
 
 	const dishCategoriesUrl = `https://www.themealdb.com/api/json/v1/1/categories.php`;
 
@@ -53,7 +54,7 @@ function App() {
 				<Route
 					exact
 					path='/dishes'
-					render={() => <DishCategories dishCategories={dishCategories} />}
+					render={() => <DishCategories dishCategories={dishCategories} setDishCategories={setDishCategories} />}
 				/>
 				<Route
 					exact
@@ -61,8 +62,10 @@ function App() {
 					render={(routerProps) => {
 						return (
 							<Dishes
-								dishCategories={dishCategories}
-								setDishCategories={setDishCategories}
+							dishes={dishes}
+							setDishes={setDishes}
+								// dishCategories={dishCategories}
+								// setDishCategories={setDishCategories}
 								match={routerProps.match}
 							/>
 						);
@@ -73,7 +76,9 @@ function App() {
 					path='/dishes/:category/:id'
 					render={(routerProps) => {
 						return (
-							<Recipe match={routerProps.match} favorites={favorites} setFavorites={setFavorites} />
+							<Recipe match={routerProps.match} 
+							favorites={favorites} 
+							setFavorites={setFavorites} />
 						);
 					}}
 				/>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './dishes.scss'
 
-const Dishes = ({ match, dishCategories, setDishCategories }) => {
+const Dishes = ({ match, dishes, setDishes }) => {
 	
 	useEffect(() => {
 		const category = match.params.category;
@@ -11,14 +11,14 @@ const Dishes = ({ match, dishCategories, setDishCategories }) => {
 		fetch(dishUrl)
 			.then((res) => res.json())
 			.then((res) => {
-                setDishCategories(res.meals);
+                setDishes(res.meals);
 			})
 			.catch((err) => {
 				console.error(err);
 			});
 	}, []);
 
-	if (!dishCategories) {
+	if (!dishes) {
 		return null;
 	}
 
@@ -26,7 +26,7 @@ const Dishes = ({ match, dishCategories, setDishCategories }) => {
 		<div>
 			<h1>{match.params.category} Dishes</h1>
 			<div className='dish-container'>
-				{dishCategories.map((dish) => {
+				{dishes.map((dish) => {
 					return (
 						<div key={dish.idMeal}>
 							<div>

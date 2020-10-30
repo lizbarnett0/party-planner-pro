@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import './drinks.scss';
 
-const DrinkRecipe = ({ match, favorites, setFavorites}) => {
+const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 	const [drinkRecipe, setDrinkRecipe] = useState();
 	const [redirect, setRedirect] = useState();
 
@@ -13,11 +13,10 @@ const DrinkRecipe = ({ match, favorites, setFavorites}) => {
 			.then((res) => res.json())
 			.then((res) => {
 				setDrinkRecipe(res.drinks[0]);
-				console.log(res.drinks[0]);
 			})
 
 			.catch(console.error);
-	}, [match.params.id]);
+	}, []);
 
 	if (!drinkRecipe) {
 		return null;
@@ -25,7 +24,6 @@ const DrinkRecipe = ({ match, favorites, setFavorites}) => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		console.log(favorites);
 		setFavorites([
 			...favorites,
 			{
@@ -85,16 +83,16 @@ const DrinkRecipe = ({ match, favorites, setFavorites}) => {
 			</ul>
 			<h3>Instructions</h3>
 			<p>{drinkRecipe.strInstructions}</p>
-			{drinkRecipe.strSource && (
-				<a href={drinkRecipe.strSource}>Link to Original Recipe</a>
-			)}
+			<div>
+				{drinkRecipe.strSource && (
+					<a href={drinkRecipe.strSource}>Link to Original Recipe</a>
+				)}
+			</div>
 			<div className='button-div'>
 				<button onClick={handleClick}>Add to Favorites</button>
 			</div>
 		</div>
 	);
-		
-		
 };
 
 export default DrinkRecipe;

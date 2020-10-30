@@ -25,7 +25,6 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 
 	const handleClick = (event) => {
 		event.preventDefault();
-		console.log(favorites)
 		setFavorites([
 			...favorites,
 			{
