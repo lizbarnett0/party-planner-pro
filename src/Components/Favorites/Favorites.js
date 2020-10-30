@@ -10,10 +10,17 @@ const Favorites = ({ favorites }) => {
 					return (
 						<div key={favorite.title}>
 							<div>
-								<Link to={`/dishes/${favorite.category}/${favorite.id}`}>
-									<img src={favorite.image} alt={favorite.title} />
-									<h3>{favorite.title}</h3>
-								</Link>
+								{(favorite.type === 'food') ? (
+									<Link to={`/dishes/${favorite.category}/${favorite.id}`}>
+										<img src={favorite.image} alt={favorite.title} />
+										<h3>{favorite.title}</h3>
+									</Link>
+								) : (
+									<Link to={`/drinks/${favorite.category}/${favorite.id}`}>
+										<img src={favorite.image} alt={favorite.title} />
+										<h3>{favorite.title}</h3>
+									</Link>
+								)}
 							</div>
 						</div>
 					);
@@ -22,6 +29,5 @@ const Favorites = ({ favorites }) => {
 		</div>
 	);
 };
-
 
 export default Favorites;

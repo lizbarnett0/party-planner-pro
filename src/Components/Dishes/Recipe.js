@@ -27,12 +27,13 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 		event.preventDefault();
 		console.log(favorites)
 		setFavorites([
-			// ...favorites,
+			...favorites,
 			{
 				title: recipe.strMeal,
 				image: recipe.strMealThumb,
 				id: recipe.idMeal,
-				category:recipe.strCategory
+				category:recipe.strCategory,
+				type:'food'
 			},
 		]);
 		setRedirect(true);
@@ -153,7 +154,6 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 			</ul>
 			<h3>Instructions</h3>
 			<p>{recipe.strInstructions}</p>
-
 			<div>
 				{recipe.strSource && (
 					<a href={recipe.strSource}>Link to Original Recipe</a>

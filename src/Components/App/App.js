@@ -97,7 +97,13 @@ function App() {
 					exact
 					path='/drinks/:category/:alcohol/:id'
 					render={(routerProps) => {
-						return <DrinkRecipe match={routerProps.match} />;
+						return (
+							<DrinkRecipe
+								match={routerProps.match}
+								favorites={favorites}
+								setFavorites={setFavorites}
+							/>
+						);
 					}}
 				/>
 				<Route

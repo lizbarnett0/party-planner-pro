@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Redirect } from 'react-router-dom';
 import './drinks.scss';
 
-const DrinkRecipe = ({ match }) => {
+const DrinkRecipe = ({ match, favorites, setFavorites}) => {
 	const [drinkRecipe, setDrinkRecipe] = useState();
+	const [redirect, setRedirect] = useState();
 
 	useEffect(() => {
 		const recipeUrl = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${match.params.id}`;
@@ -20,6 +22,27 @@ const DrinkRecipe = ({ match }) => {
 	if (!drinkRecipe) {
 		return null;
 	}
+
+	const handleClick = (event) => {
+		event.preventDefault();
+		console.log(favorites);
+		setFavorites([
+			...favorites,
+			{
+				title: drinkRecipe.strDrink,
+				image: drinkRecipe.strDrinkThumb,
+				id: drinkRecipe.idDrink,
+				category: drinkRecipe.strAlcoholic,
+				type: 'drink',
+			},
+		]);
+		setRedirect(true);
+	};
+
+	if (redirect) {
+		return <Redirect to='/Favorites' />;
+	}
+
 	return (
 		<div className='recipe-container'>
 			<h1>{drinkRecipe.strDrink}</h1>
@@ -65,8 +88,13 @@ const DrinkRecipe = ({ match }) => {
 			{drinkRecipe.strSource && (
 				<a href={drinkRecipe.strSource}>Link to Original Recipe</a>
 			)}
+			<div className='button-div'>
+				<button onClick={handleClick}>Add to Favorites</button>
+			</div>
 		</div>
 	);
+		
+		
 };
 
 export default DrinkRecipe;
