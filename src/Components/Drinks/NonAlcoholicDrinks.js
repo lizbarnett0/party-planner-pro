@@ -12,7 +12,6 @@ const NonAlcoholicDrinks = () => {
 			.then((res) => res.json())
 			.then((res) => {
 				setNonAlcoholicDrinks(res.drinks);
-				console.log(res.drinks);
 			})
 			.catch((err) => {
 				console.error(err);

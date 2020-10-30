@@ -18,6 +18,10 @@ const Dishes = ({ match, dishCategories, setDishCategories }) => {
 			});
 	}, []);
 
+	if (!dishCategories) {
+		return null;
+	}
+
 	return (
 		<div>
 			<h1>{match.params.category} Dishes</h1>

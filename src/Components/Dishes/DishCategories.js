@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './dishes.scss'
-
+import './dishes.scss';
 
 const DishCategories = ({ dishCategories }) => {
+	
+
 	let dishList = dishCategories.map((category) => {
 		return (
 			<div key={category.idCategory}>
@@ -16,9 +17,9 @@ const DishCategories = ({ dishCategories }) => {
 	});
 	return (
 		<div>
-		<h1>Dish Categories</h1>
-	<div className='dish-container'>{dishList}</div>
-	</div>
+			<h1>Dish Categories</h1>
+			<div className='dish-container'>{dishList}</div>
+		</div>
 	);
 };
 

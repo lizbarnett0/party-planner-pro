@@ -11,12 +11,14 @@ import Dishes from '../Dishes/Dishes'
 import Recipe from '../Dishes/Recipe'
 
 import DrinkCategories from '../Drinks/DrinkCategories';
-import AlcoholicDrinks from '../Drinks/AlcoholicDrinks';
+import AlcoholicDrinkCategories from '../Drinks/AlcoholicDrinkCategories';
+import AlcoholTypes from '../Drinks/AlcoholTypes'
 import NonAlcoholicDrinks from '../Drinks/NonAlcoholicDrinks';
 import DrinkRecipe from '../Drinks/DrinkRecipe';
 
 import DialogueCategories from '../Dialogue/DialogueCategories';
 import Dialogue from '../Dialogue/Dialogue';
+
 
 function App() {
 	const [dishCategories, setDishCategories] = useState([]);
@@ -73,9 +75,23 @@ function App() {
 				<Route
 					exact
 					path='/drinks/alcoholic'
-					render={() => <AlcoholicDrinks />}
+					render={() => <AlcoholicDrinkCategories />}
+				/>
+				<Route
+					exact
+					path='/drinks/alcoholic/:alcohol'
+					render={(routerProps) => {
+						return <AlcoholTypes match={routerProps.match} />;
+					}}
 				/>
 
+				<Route
+					exact
+					path='/drinks/:category/:alcohol/:id'
+					render={(routerProps) => {
+						return <DrinkRecipe match={routerProps.match} />;
+					}}
+				/>
 				<Route
 					exact
 					path='/drinks/nonalcoholic'
