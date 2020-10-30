@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import './drinks.scss';
 
 const DrinkRecipe = ({ match, favorites, setFavorites }) => {
-	const [drinkRecipe, setDrinkRecipe] = useState();
+	const [recipe, setRecipe] = useState();
 	const [redirect, setRedirect] = useState();
 
 	useEffect(() => {
@@ -12,13 +12,13 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 		fetch(recipeUrl)
 			.then((res) => res.json())
 			.then((res) => {
-				setDrinkRecipe(res.drinks[0]);
+				setRecipe(res.drinks[0]);
 			})
 
 			.catch(console.error);
 	}, []);
 
-	if (!drinkRecipe) {
+	if (!recipe) {
 		return null;
 	}
 
@@ -27,10 +27,13 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 		setFavorites([
 			...favorites,
 			{
-				title: drinkRecipe.strDrink,
-				image: drinkRecipe.strDrinkThumb,
-				id: drinkRecipe.idDrink,
-				category: drinkRecipe.strAlcoholic,
+				title: recipe.strDrink,
+				image: recipe.strDrinkThumb,
+				id: recipe.idDrink,
+				category:
+					recipe.strAlcoholic === 'Non alcoholic'
+						? 'nonalcoholic'
+						: 'alcoholic',
 				type: 'drink',
 			},
 		]);
@@ -43,53 +46,49 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 
 	return (
 		<div className='recipe-container'>
-			<h1>{drinkRecipe.strDrink}</h1>
+			<h1>{recipe.strDrink}</h1>
 			<img
 				className='drink-img-recipe'
-				src={drinkRecipe.strDrinkThumb}
-				alt={drinkRecipe.strDrink}></img>
+				src={recipe.strDrinkThumb}
+				alt={recipe.strDrink}></img>
 			<h3>Ingredients</h3>
 			<ul>
-				{drinkRecipe.strIngredient1 && (
+				{recipe.strIngredient1 && (
 					<li>
-						{drinkRecipe.strMeasure1} {drinkRecipe.strIngredient1}
+						{recipe.strMeasure1} {recipe.strIngredient1}
 					</li>
 				)}
-				{drinkRecipe.strIngredient2 && (
+				{recipe.strIngredient2 && (
 					<li>
-						{drinkRecipe.strMeasure2} {drinkRecipe.strIngredient2}
+						{recipe.strMeasure2} {recipe.strIngredient2}
 					</li>
 				)}
-				{drinkRecipe.strIngredient3 && (
+				{recipe.strIngredient3 && (
 					<li>
-						{drinkRecipe.strMeasure3} {drinkRecipe.strIngredient3}
+						{recipe.strMeasure3} {recipe.strIngredient3}
 					</li>
 				)}
-				{drinkRecipe.strIngredient4 && (
+				{recipe.strIngredient4 && (
 					<li>
-						{drinkRecipe.strMeasure4} {drinkRecipe.strIngredient4}
+						{recipe.strMeasure4} {recipe.strIngredient4}
 					</li>
 				)}
-				{drinkRecipe.strIngredient5 && (
+				{recipe.strIngredient5 && (
 					<li>
-						{drinkRecipe.strMeasure5} {drinkRecipe.strIngredient5}
+						{recipe.strMeasure5} {recipe.strIngredient5}
 					</li>
 				)}
-				{drinkRecipe.strIngredient6 && (
+				{recipe.strIngredient6 && (
 					<li>
-						{drinkRecipe.strMeasure6} {drinkRecipe.strIngredient6}
+						{recipe.strMeasure6} {recipe.strIngredient6}
 					</li>
 				)}
 			</ul>
 			<h3>Instructions</h3>
-			<p>{drinkRecipe.strInstructions}</p>
-			<div>
-				{drinkRecipe.strSource && (
-					<a href={drinkRecipe.strSource}>Link to Original Recipe</a>
-				)}
-			</div>
+			<p>{recipe.strInstructions}</p>
 			<div className='button-div'>
 				<button onClick={handleClick}>Add to Favorites</button>
+				{console.log(recipe)}
 			</div>
 		</div>
 	);
