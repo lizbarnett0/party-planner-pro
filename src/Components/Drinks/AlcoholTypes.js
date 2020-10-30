@@ -39,8 +39,7 @@ const AlcoholTypes = ({ match }) => {
 								src={type.strDrinkThumb}
 								alt={type.strDrink}></img>
 							<h1>
-								<Link
-									to={`/drinks/alcoholic/${match.params.alcohol}/${type.idDrink}`}>
+								<Link to={`/drinks/alcoholic/${match.params.alcohol}/${type.idDrink}`}>
 									{type.strDrink}
 								</Link>
 							</h1>
