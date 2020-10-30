@@ -37,6 +37,7 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 				type: 'drink',
 			},
 		]);
+		
 		setRedirect(true);
 	};
 
@@ -88,7 +89,6 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 			<p>{recipe.strInstructions}</p>
 			<div className='button-div'>
 				<button onClick={handleClick}>Add to Favorites</button>
-				{console.log(recipe)}
 			</div>
 		</div>
 	);

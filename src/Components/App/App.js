@@ -50,8 +50,6 @@ function App() {
 							<Dishes
 							dishes={dishes}
 							setDishes={setDishes}
-								// dishCategories={dishCategories}
-								// setDishCategories={setDishCategories}
 								match={routerProps.match}
 							/>
 						);
@@ -106,7 +104,13 @@ function App() {
 					exact
 					path='/drinks/:category/:id'
 					render={(routerProps) => {
-						return <DrinkRecipe match={routerProps.match} />;
+						return (
+						<DrinkRecipe 
+						match={routerProps.match} 
+						favorites={favorites}
+						setFavorites={setFavorites}
+						/>
+						)
 					}}
 				/>
 				<Route exact path='/dialogue' render={() => <DialogueCategories />} />

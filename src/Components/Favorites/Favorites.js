@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Favorites = ({ favorites }) => {
-	return (
+		return (
 		<div>
 			<h1>Favorites</h1>
 			<div className='dish-container'>
