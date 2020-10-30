@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Home from '../Home/Home';
+import Favorites from '../Favorites/Favorites'
 import About from '../About/About';
 import Testimonials from '../Testimonials/Testimonials';
 
@@ -40,6 +41,7 @@ function App() {
 	return (
 		<div className='App'>
 			<Header />
+			<Route exact path='/Favorites' render={() => <Favorites />} />
 			<Route exact path='/About' render={() => <About />} />
 			<Route exact path='/Testimonials' render={() => <Testimonials />} />
 			<Route exact path='/' render={() => <Home />} />

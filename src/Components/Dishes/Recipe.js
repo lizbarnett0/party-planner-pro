@@ -4,22 +4,21 @@ import './dishes.scss';
 const Recipe = ({ match }) => {
 	const [recipe, setRecipe] = useState();
 
-    useEffect(() => {
-        const recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`;
-    
+	useEffect(() => {
+		const recipeUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${match.params.id}`;
+
 		fetch(recipeUrl)
 			.then((res) => res.json())
 			.then((res) => {
 				setRecipe(res.meals[0]);
-            })
+			})
 
-            .catch(console.error)
-    
-    }, [match.params.id]);
-    
-    if (!recipe) {
+			.catch(console.error);
+	}, [match.params.id]);
+
+	if (!recipe) {
 		return null;
-    }
+	}
 	return (
 		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
@@ -131,9 +130,15 @@ const Recipe = ({ match }) => {
 			</ul>
 			<h3>Instructions</h3>
 			<p>{recipe.strInstructions}</p>
-			{recipe.strSource && (
-				<a href={recipe.strSource}>Link to Original Recipe</a>
-			)}
+
+			<div>
+				{recipe.strSource && (
+					<a href={recipe.strSource}>Link to Original Recipe</a>
+				)}
+			</div>
+			<div className="button-div">
+				<button>Add to Favorites</button>
+			</div>
 		</div>
 	);
 };

@@ -10,8 +10,9 @@ const Header = () => {
 						<h1>PartyPlannerPro</h1>
 					</Link>
 					<nav>
-						<Link to='/About'>About</Link>
+						<Link to='/Favorites'>Favorites</Link>
 						<Link to='/Testimonials'>Testimonials</Link>
+						<Link to='/About'>About</Link>
 					</nav>
 				</header>
 			</div>
