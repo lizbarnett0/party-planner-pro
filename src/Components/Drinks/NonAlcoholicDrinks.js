@@ -29,15 +29,14 @@ const NonAlcoholicDrinks = () => {
 				{nonAlcoholicDrinks.map((drink) => {
 					return (
 						<div key={drink.idDrink}>
-							<img
-								className='drink-img'
-								src={drink.strDrinkThumb}
-								alt={drink.strDrink}></img>
-							<h1>
-								<Link to={`/drinks/nonalcoholic/${drink.idDrink}`}>
-									{drink.strDrink}
-								</Link>
-							</h1>
+							<Link to={`/drinks/nonalcoholic/${drink.idDrink}`}>
+								<img
+									className='drink-img'
+									src={drink.strDrinkThumb}
+									alt={drink.strDrink}
+								/>
+								<h3>{drink.strDrink}</h3>
+							</Link>
 						</div>
 					);
 				})}

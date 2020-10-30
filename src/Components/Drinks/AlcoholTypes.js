@@ -34,15 +34,15 @@ const AlcoholTypes = ({ match }) => {
 				{alcoholTypes.map((type) => {
 					return (
 						<div key={type.idDrink}>
-							<img
-								className='drink-img'
-								src={type.strDrinkThumb}
-								alt={type.strDrink}></img>
-							<h3>
-								<Link to={`/drinks/alcoholic/${match.params.alcohol}/${type.idDrink}`}>
-									{type.strDrink}
-								</Link>
-							</h3>
+							<Link
+								to={`/drinks/alcoholic/${match.params.alcohol}/${type.idDrink}`}>
+								<img
+									className='drink-img'
+									src={type.strDrinkThumb}
+									alt={type.strDrink}
+								/>
+								<h3>{type.strDrink}</h3>
+							</Link>
 						</div>
 					);
 				})}

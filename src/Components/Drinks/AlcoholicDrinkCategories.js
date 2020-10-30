@@ -1,14 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Bourbon from '../../imgs/bourbon.jpeg'
-import Champagne from '../../imgs/champagne.jpeg'
-import Cognac from'../../imgs/cognac.jpeg'
-import Gin from '../../imgs/gin.jpeg'
-import Rum from '../../imgs/rum.jpeg'
-import Scotch from '../../imgs/scotch.jpeg'
-import Tequila from '../../imgs/tequila.jpeg'
-import Vodka from '../../imgs/vodka.jpeg'
-
+import Bourbon from '../../imgs/bourbon.jpeg';
+import Champagne from '../../imgs/champagne.jpeg';
+import Cognac from '../../imgs/cognac.jpeg';
+import Gin from '../../imgs/gin.jpeg';
+import Rum from '../../imgs/rum.jpeg';
+import Scotch from '../../imgs/scotch.jpeg';
+import Tequila from '../../imgs/tequila.jpeg';
+import Vodka from '../../imgs/vodka.jpeg';
 
 const AlcoholicDrinkCategories = () => {
 	return (
@@ -33,7 +32,6 @@ const AlcoholicDrinkCategories = () => {
 						<h3>Cognac</h3>
 					</Link>
 				</div>
-
 				<div className='alc'>
 					<Link to='/drinks/alcoholic/gin'>
 						<img className='alc-drink-img' src={Gin} alt='gin' />
