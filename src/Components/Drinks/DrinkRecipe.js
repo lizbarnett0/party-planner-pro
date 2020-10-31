@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import './drinks.scss';
+import Axios from 'axios'
 
 const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 	const [recipe, setRecipe] = useState();
@@ -12,10 +13,21 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 		fetch(recipeUrl)
 			.then((res) => res.json())
 			.then((res) => {
-				setRecipe(res.drinks[0]);
+				setRecipe(res.drinks);
 			})
 
 			.catch(console.error);
+
+
+
+		// Axios.get(recipeUrl)
+		// 	.then((res) => {
+		// 		console.log(res)
+		// 		setRecipe(res.drinks);
+				
+		//  	})
+		// 	.catch(console.error);
+
 	}, []);
 
 	if (!recipe) {
@@ -27,17 +39,17 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 		setFavorites([
 			...favorites,
 			{
-				title: recipe.strDrink,
-				image: recipe.strDrinkThumb,
-				id: recipe.idDrink,
+				title: recipe[0].strDrink,
+				image: recipe[0].strDrinkThumb,
+				id: recipe[0].idDrink,
 				category:
-					recipe.strAlcoholic === 'Non alcoholic'
+					recipe[0].strAlcoholic === 'Non alcoholic'
 						? 'nonalcoholic'
 						: 'alcoholic',
 				type: 'drink',
 			},
 		]);
-		
+
 		setRedirect(true);
 	};
 
@@ -47,46 +59,46 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 
 	return (
 		<div className='recipe-container'>
-			<h1>{recipe.strDrink}</h1>
+			<h1>{recipe[0].strDrink}</h1>
 			<img
 				className='drink-img-recipe'
-				src={recipe.strDrinkThumb}
-				alt={recipe.strDrink}></img>
+				src={recipe[0].strDrinkThumb}
+				alt={recipe[0].strDrink}></img>
 			<h3>Ingredients</h3>
 			<ul>
-				{recipe.strIngredient1 && (
+				{recipe[0].strIngredient1 && (
 					<li>
-						{recipe.strMeasure1} {recipe.strIngredient1}
+						{recipe[0].strMeasure1} {recipe[0].strIngredient1}
 					</li>
 				)}
-				{recipe.strIngredient2 && (
+				{recipe[0].strIngredient2 && (
 					<li>
-						{recipe.strMeasure2} {recipe.strIngredient2}
+						{recipe[0].strMeasure2} {recipe[0].strIngredient2}
 					</li>
 				)}
-				{recipe.strIngredient3 && (
+				{recipe[0].strIngredient3 && (
 					<li>
-						{recipe.strMeasure3} {recipe.strIngredient3}
+						{recipe[0].strMeasure3} {recipe[0].strIngredient3}
 					</li>
 				)}
-				{recipe.strIngredient4 && (
+				{recipe[0].strIngredient4 && (
 					<li>
-						{recipe.strMeasure4} {recipe.strIngredient4}
+						{recipe[0].strMeasure4} {recipe[0].strIngredient4}
 					</li>
 				)}
-				{recipe.strIngredient5 && (
+				{recipe[0].strIngredient5 && (
 					<li>
-						{recipe.strMeasure5} {recipe.strIngredient5}
+						{recipe[0].strMeasure5} {recipe[0].strIngredient5}
 					</li>
 				)}
-				{recipe.strIngredient6 && (
+				{recipe[0].strIngredient6 && (
 					<li>
-						{recipe.strMeasure6} {recipe.strIngredient6}
+						{recipe[0].strMeasure6} {recipe[0].strIngredient6}
 					</li>
 				)}
 			</ul>
 			<h3>Instructions</h3>
-			<p>{recipe.strInstructions}</p>
+			<p>{recipe[0].strInstructions}</p>
 			<div className='button-div'>
 				<button onClick={handleClick}>Add to Favorites</button>
 			</div>
