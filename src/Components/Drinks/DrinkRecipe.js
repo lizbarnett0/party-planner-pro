@@ -19,15 +19,6 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 			.catch(console.error);
 
 
-
-		// Axios.get(recipeUrl)
-		// 	.then((res) => {
-		// 		console.log(res)
-		// 		setRecipe(res.drinks);
-				
-		//  	})
-		// 	.catch(console.error);
-
 	}, []);
 
 	if (!recipe) {
