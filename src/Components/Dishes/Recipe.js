@@ -48,110 +48,110 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 			<div className='recipe-img'>
 				<img src={recipe.strMealThumb} alt={recipe.strMeal} />
 			</div>
-			<h3>Ingredients</h3>
-			<ul>
+			<h2>Ingredients</h2>
+			<div>
 				{recipe.strIngredient1 && (
-					<li>
+					<p>
 						{recipe.strMeasure1} {recipe.strIngredient1}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient2 && (
-					<li>
+					<p>
 						{recipe.strMeasure2} {recipe.strIngredient2}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient3 && (
-					<li>
+					<p>
 						{recipe.strMeasure3} {recipe.strIngredient3}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient4 && (
-					<li>
+					<p>
 						{recipe.strMeasure4} {recipe.strIngredient4}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient5 && (
-					<li>
+					<p>
 						{recipe.strMeasure5} {recipe.strIngredient5}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient6 && (
-					<li>
+					<p>
 						{recipe.strMeasure6} {recipe.strIngredient6}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient7 && (
-					<li>
+					<p>
 						{recipe.strMeasure7} {recipe.strIngredient7}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient8 && (
-					<li>
+					<p>
 						{recipe.strMeasure8} {recipe.strIngredient8}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient9 && (
-					<li>
+					<p>
 						{recipe.strMeasure9} {recipe.strIngredient9}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient10 && (
-					<li>
+					<p>
 						{recipe.strMeasure10} {recipe.strIngredient10}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient11 && (
-					<li>
+					<p>
 						{recipe.strMeasure11} {recipe.strIngredient11}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient12 && (
-					<li>
+					<p>
 						{recipe.strMeasure12} {recipe.strIngredient12}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient13 && (
-					<li>
+					<p>
 						{recipe.strMeasure13} {recipe.strIngredient13}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient14 && (
-					<li>
+					<p>
 						{recipe.strMeasure14} {recipe.strIngredient14}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient15 && (
-					<li>
+					<p>
 						{recipe.strMeasure15} {recipe.strIngredient15}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient16 && (
-					<li>
+					<p>
 						{recipe.strMeasure16} {recipe.strIngredient16}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient17 && (
-					<li>
+					<p>
 						{recipe.strMeasure17} {recipe.strIngredient17}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient18 && (
-					<li>
+					<p>
 						{recipe.strMeasure18} {recipe.strIngredient18}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient14 && (
-					<li>
+					<p>
 						{recipe.strMeasure19} {recipe.strIngredient19}
-					</li>
+					</p>
 				)}
 				{recipe.strIngredient20 && (
-					<li>
+					<p>
 						{recipe.strMeasure20} {recipe.strIngredient20}
-					</li>
+					</p>
 				)}
-			</ul>
-			<h3>Instructions</h3>
+			</div>
+			<h2>Instructions</h2>
 			<p>{recipe.strInstructions}</p>
 			<div>
 				{recipe.strSource && (

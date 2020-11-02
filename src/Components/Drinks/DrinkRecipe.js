@@ -55,40 +55,40 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 				className='drink-img-recipe'
 				src={recipe[0].strDrinkThumb}
 				alt={recipe[0].strDrink}></img>
-			<h3>Ingredients</h3>
-			<ul>
+			<h2>Ingredients</h2>
+			<div>
 				{recipe[0].strIngredient1 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure1} {recipe[0].strIngredient1}
-					</li>
+					</p>
 				)}
 				{recipe[0].strIngredient2 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure2} {recipe[0].strIngredient2}
-					</li>
+					</p>
 				)}
 				{recipe[0].strIngredient3 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure3} {recipe[0].strIngredient3}
-					</li>
+					</p>
 				)}
 				{recipe[0].strIngredient4 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure4} {recipe[0].strIngredient4}
-					</li>
+					</p>
 				)}
 				{recipe[0].strIngredient5 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure5} {recipe[0].strIngredient5}
-					</li>
+					</p>
 				)}
 				{recipe[0].strIngredient6 && (
-					<li>
+					<p>
 						{recipe[0].strMeasure6} {recipe[0].strIngredient6}
-					</li>
+					</p>
 				)}
-			</ul>
-			<h3>Instructions</h3>
+			</div>
+			<h2>Instructions</h2>
 			<p>{recipe[0].strInstructions}</p>
 			<div className='button-div'>
 				<button onClick={handleClick}>Add to Favorites</button>
