@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import './dishes.scss';
 
-
 const Recipe = ({ match, favorites, setFavorites }) => {
 	const [recipe, setRecipe] = useState();
 	const [redirect, setRedirect] = useState();
@@ -31,8 +30,8 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 				title: recipe.strMeal,
 				image: recipe.strMealThumb,
 				id: recipe.idMeal,
-				category:recipe.strCategory,
-				type:'food'
+				category: recipe.strCategory,
+				type: 'food',
 			},
 		]);
 		setRedirect(true);

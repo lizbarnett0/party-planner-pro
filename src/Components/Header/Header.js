@@ -1,22 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './header.scss'
+import { Nav, Navbar } from 'react-bootstrap';
+import './header.scss';
 
 const Header = () => {
-    return (
-			<div>
-				<header>
+	return (
+		<div>
+			<header>
+				<Navbar collapseOnSelect expand='lg'>
 					<Link to='/'>
-						<h1>PartyPlannerPro</h1>
+						<h2>PartyPlannerPro</h2>
 					</Link>
-					<nav>
-						<Link to='/Favorites'>Favorites</Link>
-						<Link to='/Testimonials'>Testimonials</Link>
-						<Link to='/About'>About</Link>
-					</nav>
-				</header>
-			</div>
-		);
+					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
+					<Navbar.Collapse id='responsive-navbar-nav'>
+						<Nav className='justify-content-end' style={{ width: '100%' }}>
+							<Link to='/Favorites'>Favorites</Link>
+							<Link to='/Testimonials'>Testimonials</Link>
+							<Link to='/About'>About</Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+			</header>
+		</div>
+	);
 };
 
 export default Header;

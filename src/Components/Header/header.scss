@@ -6,34 +6,39 @@ header {
 	justify-content: space-between; //items are evenly distributed in the line; first item is on the start line, last item on the end line
 	align-items: center; //this is aligning them in the vertical center
 	color: black;
-	background-color: #BFD8BD;
+	background-color: #bfd8bd;
 }
 
-header nav a {
-	display: inline-block;
+.responsive-navbar-nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.navbar-nav a{
 	text-decoration: none;
 	color: black;
 	font-family: 'Montserrat', sans-serif;
 	padding: 0.5rem 1rem;
 	transition: all 300ms ease;
+	
 }
 
 header nav a:hover {
 	background-color: #ddd;
-	text-decoration: underline;
+	// text-decoration: underline;
 }
 
-header h1 a:hover {
+header h2 a:hover {
 	text-decoration: none;
 }
 
-header h1 {
+header h2 {
 	font-family: 'Sacramento', cursive;
 	margin: 0;
 	padding: 0.5rem;
 	color: black;
 }
 
- a {
+a {
 	text-decoration: none;
 }
