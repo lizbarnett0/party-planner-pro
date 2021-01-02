@@ -26,9 +26,21 @@ h3 :hover {
 text-decoration: none;
 
 }
-.drink-img {
-	width: 100%;
+
+
+.drink-img-recipe-div {
+	display: flex;
+	justify-content: center;
 }
+
+.drink-img-recipe {
+	text-align: center;
+	margin: auto;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}
+
 
 .drink-img-recipe {
 	display: block;

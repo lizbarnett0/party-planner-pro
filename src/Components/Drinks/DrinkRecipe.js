@@ -51,10 +51,12 @@ const DrinkRecipe = ({ match, favorites, setFavorites }) => {
 	return (
 		<div className='recipe-container'>
 			<h1>{recipe[0].strDrink}</h1>
+			<div className='drink-img-recipe-div'>
 			<img
 				className='drink-img-recipe'
 				src={recipe[0].strDrinkThumb}
 				alt={recipe[0].strDrink}></img>
+			</div>
 			<h2>Ingredients</h2>
 			<div>
 				{recipe[0].strIngredient1 && (
