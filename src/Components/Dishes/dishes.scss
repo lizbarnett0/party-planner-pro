@@ -1,5 +1,7 @@
 h1 {
 	text-align: center;
+	font-family: 'Sacramento', cursive;
+	margin: 50px;
 }
 
 .dish-container {
@@ -18,7 +20,7 @@ h1 {
 }
 .dish-container h3 {
 	color: black;
-	
+	font-family: 'Montserrat', sans-serif;
 }
 
 .dish-card-title {
@@ -27,15 +29,16 @@ h1 {
 	margin: 0;
 	padding: 1rem;
 	text-align: center;
+	font-family: 'Montserrat', sans-serif;
 }
 
+.dish-card-title :hover {
+	text-decoration: none;
+}
 .recipe-container img {
 	width: 400px;
-
 }
 
 .recipe-img {
 	text-align: center;
-
-
 }
