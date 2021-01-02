@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
+import './app.scss'
 
 import Header from '../Header/Header';
 import Home from '../Home/Home';
@@ -40,7 +41,12 @@ function App() {
 				<Route
 					exact
 					path='/dishes'
-					render={() => <DishCategories dishCategories={dishCategories} setDishCategories={setDishCategories} />}
+					render={() => (
+						<DishCategories
+							dishCategories={dishCategories}
+							setDishCategories={setDishCategories}
+						/>
+					)}
 				/>
 				<Route
 					exact
@@ -48,8 +54,8 @@ function App() {
 					render={(routerProps) => {
 						return (
 							<Dishes
-							dishes={dishes}
-							setDishes={setDishes}
+								dishes={dishes}
+								setDishes={setDishes}
 								match={routerProps.match}
 							/>
 						);
@@ -60,9 +66,11 @@ function App() {
 					path='/dishes/:category/:id'
 					render={(routerProps) => {
 						return (
-							<Recipe match={routerProps.match} 
-							favorites={favorites} 
-							setFavorites={setFavorites} />
+							<Recipe
+								match={routerProps.match}
+								favorites={favorites}
+								setFavorites={setFavorites}
+							/>
 						);
 					}}
 				/>
@@ -105,12 +113,12 @@ function App() {
 					path='/drinks/:category/:id'
 					render={(routerProps) => {
 						return (
-						<DrinkRecipe 
-						match={routerProps.match} 
-						favorites={favorites}
-						setFavorites={setFavorites}
-						/>
-						)
+							<DrinkRecipe
+								match={routerProps.match}
+								favorites={favorites}
+								setFavorites={setFavorites}
+							/>
+						);
 					}}
 				/>
 				<Route exact path='/dialogue' render={() => <DialogueCategories />} />
