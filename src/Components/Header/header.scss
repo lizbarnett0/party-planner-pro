@@ -20,16 +20,16 @@ header {
 	font-family: 'Montserrat', sans-serif;
 	padding: 0.5rem 1rem;
 	transition: all 300ms ease;
-	
 }
 
 header nav a:hover {
 	background-color: #ddd;
-	// text-decoration: underline;
+	text-decoration: none;
 }
 
-header h2 a:hover {
+header nav h2 a:hover {
 	text-decoration: none;
+	background-color: none;
 }
 
 header h2 {
@@ -39,6 +39,4 @@ header h2 {
 	color: black;
 }
 
-a {
-	text-decoration: none;
-}
+
