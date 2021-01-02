@@ -44,11 +44,15 @@ const Recipe = ({ match, favorites, setFavorites }) => {
 	return (
 		<div className='recipe-container'>
 			<h1>{recipe.strMeal}</h1>
-			<div className='recipe-img'>
-				<img src={recipe.strMealThumb} alt={recipe.strMeal} />
+			<div className='recipe-img-div'>
+				<img
+					className='recipe-img'
+					src={recipe.strMealThumb}
+					alt={recipe.strMeal}
+				/>
 			</div>
 			<h2>Ingredients</h2>
-			<div>
+			<div className='ingredients-div'>
 				{recipe.strIngredient1 && (
 					<p>
 						{recipe.strMeasure1} {recipe.strIngredient1}

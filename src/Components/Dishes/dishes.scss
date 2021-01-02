@@ -38,7 +38,20 @@ h1 {
 .recipe-container img {
 	width: 400px;
 }
+.recipe-img-div {
+	display: flex;
+	justify-content: center;
+}
 
 .recipe-img {
 	text-align: center;
+	margin: auto;
+	width: 100%;
+	max-width: 400px;
+	height: auto;
+}
+
+.ingredients-div {
+	//text-align: center;
+	max-width: 400px;
 }
