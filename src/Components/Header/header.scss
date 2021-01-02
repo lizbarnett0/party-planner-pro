@@ -1,18 +1,18 @@
 //Styling for the header
 
 header {
-	display: flex;
-	flex-direction: row; // items go left to right
-	justify-content: space-between; //items are evenly distributed in the line; first item is on the start line, last item on the end line
-	align-items: center; //this is aligning them in the vertical center
-	color: black;
+	// display: flex;
+	// flex-direction: row; // items go left to right
+	// justify-content: space-between; //items are evenly distributed in the line; first item is on the start line, last item on the end line
+	// align-items: center; //this is aligning them in the vertical center
+	// color: black;
 	background-color: #bfd8bd;
 }
 
-.responsive-navbar-nav {
-	display: flex;
-	justify-content: flex-end;
-}
+// .responsive-navbar-nav {
+// 	display: flex;
+// 	justify-content: flex-end;
+// }
 
 .navbar-nav a{
 	text-decoration: none;
@@ -38,5 +38,3 @@ header h2 {
 	padding: 0.5rem;
 	color: black;
 }
-
-
