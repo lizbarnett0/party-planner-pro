@@ -13,7 +13,7 @@ const Header = () => {
 					</Link>
 					<Navbar.Toggle aria-controls='responsive-navbar-nav' />
 					<Navbar.Collapse id='responsive-navbar-nav'>
-						<Nav className='justify-content-end' style={{ width: '100%' }}>
+						<Nav className='ml-auto' >
 							<Link to='/Favorites'>Favorites</Link>
 							<Link to='/Testimonials'>Testimonials</Link>
 							<Link to='/About'>About</Link>
